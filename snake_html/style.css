@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  color: #25303d;
+  background:
+    linear-gradient(135deg, rgba(122, 182, 153, 0.22), rgba(87, 128, 171, 0.2)),
+    #eef7f1;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.game-shell {
+  width: min(100%, 860px);
+}
+
+.topbar {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  color: #f6fbf8;
+  background: #24303c;
+  border-radius: 8px 8px 0 0;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+#subtitle {
+  margin-top: 4px;
+  color: #cbd9d2;
+  font-size: 14px;
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.status span {
+  min-width: 82px;
+  padding: 7px 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.board-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 720 / 500;
+  max-height: calc(100vh - 150px);
+  background: #e2f1e8;
+  border: 3px solid #526f5e;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(20, 28, 35, 0.42);
+}
+
+.hidden {
+  display: none;
+}
+
+.panel {
+  width: min(92%, 330px);
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  background: rgba(250, 253, 251, 0.96);
+  border: 1px solid rgba(63, 91, 76, 0.22);
+  border-radius: 8px;
+  box-shadow: 0 18px 46px rgba(20, 32, 38, 0.22);
+}
+
+.panel.wide {
+  width: min(92%, 420px);
+}
+
+.panel.small {
+  width: min(92%, 300px);
+}
+
+.panel h2 {
+  font-size: 34px;
+}
+
+.panel p {
+  color: #677789;
+}
+
+button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #468a79;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+
+button:hover,
+button:focus-visible {
+  outline: none;
+  background: #5ba68f;
+  box-shadow: 0 8px 18px rgba(70, 138, 121, 0.28);
+  transform: translateY(-1px);
+}
+
+button.primary {
+  background: #2f7d58;
+}
+
+button.primary:hover,
+button.primary:focus-visible {
+  background: #3f996e;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .status {
+    justify-content: flex-start;
+  }
+
+  .board-wrap {
+    max-height: none;
+  }
+}

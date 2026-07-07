@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="game-shell" aria-label="贪吃蛇游戏">
+      <div class="topbar">
+        <div>
+          <h1>贪吃蛇</h1>
+          <p id="subtitle">方向键或 WASD 控制，P/空格暂停</p>
+        </div>
+        <div class="status">
+          <span>得分 <strong id="scoreText">0</strong></span>
+          <span>最高分 <strong id="bestText">0</strong></span>
+          <span>难度 <strong id="difficultyText">普通</strong></span>
+          <span>长度 <strong id="lengthText">3</strong></span>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <canvas id="gameCanvas" width="720" height="500" aria-label="游戏区域"></canvas>
+
+        <div id="menuLayer" class="layer">
+          <div class="panel">
+            <h2>贪吃蛇</h2>
+            <p>历史最高分：<strong id="menuBestText">0</strong></p>
+            <button id="startBtn" class="primary">开始游戏</button>
+            <button id="difficultyBtn">难度选择</button>
+            <button id="soundBtn">音效：开</button>
+            <button id="exitBtn">退出游戏</button>
+          </div>
+        </div>
+
+        <div id="difficultyLayer" class="layer hidden">
+          <div class="panel wide">
+            <h2>难度选择</h2>
+            <p>当前难度：<strong id="currentDifficultyText">普通</strong></p>
+            <button class="difficulty-option" data-difficulty="简单">简单 - 速度较慢</button>
+            <button class="difficulty-option" data-difficulty="普通">普通 - 节奏适中</button>
+            <button class="difficulty-option" data-difficulty="困难">困难 - 更有挑战</button>
+            <button id="backMenuBtn">返回主菜单</button>
+          </div>
+        </div>
+
+        <div id="pauseLayer" class="layer hidden">
+          <div class="panel small">
+            <h2>游戏已暂停</h2>
+            <p>按 P 或空格继续</p>
+          </div>
+        </div>
+
+        <div id="gameOverLayer" class="layer hidden">
+          <div class="panel">
+            <h2>游戏结束</h2>
+            <p>本局得分：<strong id="finalScoreText">0</strong></p>
+            <p>历史最高分：<strong id="finalBestText">0</strong></p>
+            <button id="restartBtn" class="primary">重新开始</button>
+            <button id="gameOverMenuBtn">返回主菜单</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
