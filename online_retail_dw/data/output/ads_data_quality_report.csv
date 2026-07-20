@@ -1,0 +1,18 @@
+metric_name,metric_value,metric_unit,metric_description
+ads_overview_amount_difference,0.000000,GBP,Absolute difference between DWD and ADS overview sales
+cancel_record_count,9251.000000,COUNT,Deduplicated C-prefixed cancellation detail rows
+duplicate_record_count,5268.000000,COUNT,Complete duplicate rows beyond the first occurrence
+dws_daily_amount_difference,0.000000,GBP,Absolute difference between DWD and daily DWS sales
+dws_monthly_amount_difference,0.000000,GBP,Absolute difference between DWD and monthly DWS sales
+invalid_date_record_count,0.000000,COUNT,ODS rows with unparseable invoice date
+invalid_record_count,7780.000000,COUNT,Rows classified into dwd_invalid_detail
+missing_customer_record_count,135080.000000,COUNT,ODS rows with missing customer identifier
+missing_description_record_count,1454.000000,COUNT,ODS rows with missing product description
+non_positive_price_record_count,2517.000000,COUNT,ODS rows with unit price less than or equal to zero
+non_positive_quantity_record_count,10624.000000,COUNT,ODS rows with quantity less than or equal to zero
+product_dimension_join_failure_count,0.000000,COUNT,Valid-sales rows that cannot join dim_product
+raw_cancel_record_count,9288.000000,COUNT,C-prefixed rows before duplicate removal
+raw_record_count,541909.000000,COUNT,All ODS source records
+sales_amount_mismatch_count,0.000000,COUNT,Rows where sales amount differs from quantity times unit price
+valid_record_rate,0.968572,RATIO,Valid sales rows divided by all ODS rows
+valid_sales_record_count,524878.000000,COUNT,Deduplicated valid-sales detail rows

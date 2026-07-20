@@ -1,0 +1,318 @@
+{
+  "generated_at": "2026-07-20T16:30:36+08:00",
+  "source": {
+    "path": "G:\\生产实习大作业\\online_retail_dw\\data\\raw\\Online Retail.xlsx",
+    "file_name": "Online Retail.xlsx",
+    "file_size_bytes": 23715344,
+    "sheet_names": [
+      "Online Retail"
+    ]
+  },
+  "shape": {
+    "rows": 541909,
+    "columns": 8
+  },
+  "columns": [
+    "InvoiceNo",
+    "StockCode",
+    "Description",
+    "Quantity",
+    "InvoiceDate",
+    "UnitPrice",
+    "CustomerID",
+    "Country"
+  ],
+  "dtypes": {
+    "InvoiceNo": "object",
+    "StockCode": "object",
+    "Description": "object",
+    "Quantity": "int64",
+    "InvoiceDate": "datetime64[us]",
+    "UnitPrice": "float64",
+    "CustomerID": "float64",
+    "Country": "str"
+  },
+  "missing_counts": {
+    "InvoiceNo": 0,
+    "StockCode": 0,
+    "Description": 1454,
+    "Quantity": 0,
+    "InvoiceDate": 0,
+    "UnitPrice": 0,
+    "CustomerID": 135080,
+    "Country": 0
+  },
+  "unique_counts_excluding_null": {
+    "InvoiceNo": 25900,
+    "StockCode": 4070,
+    "Description": 4223,
+    "Quantity": 722,
+    "InvoiceDate": 23260,
+    "UnitPrice": 1630,
+    "CustomerID": 4372,
+    "Country": 38
+  },
+  "duplicate_counts": {
+    "duplicate_rows_beyond_first": 5268,
+    "rows_in_duplicate_groups": 10147
+  },
+  "time": {
+    "min": "2010-12-01 08:26:00",
+    "max": "2011-12-09 12:50:00",
+    "missing": 0,
+    "parse_failure": 0
+  },
+  "quantity": {
+    "min": -80995,
+    "max": 80995,
+    "missing": 0,
+    "parse_failure": 0,
+    "non_integer": 0,
+    "zero": 0,
+    "negative": 10624,
+    "non_positive": 10624
+  },
+  "unit_price": {
+    "min": -11062.06,
+    "max": 38970.0,
+    "missing": 0,
+    "parse_failure": 0,
+    "zero": 2515,
+    "negative": 2,
+    "non_positive": 2517
+  },
+  "business_counts": {
+    "cancel_record_count": 9288,
+    "cancel_invoice_count": 3836,
+    "country_count": 38,
+    "customer_count_excluding_null": 4372,
+    "stock_code_count_excluding_null": 4070,
+    "missing_customer_record_count": 135080,
+    "missing_description_record_count": 1454
+  },
+  "special_stock_code_candidates": {
+    "rule": "不匹配 ^\\d{5}[A-Za-z]{0,2}$；仅供阶段1排查，不在本阶段删除",
+    "record_count": 2995,
+    "unique_count": 33,
+    "values": [
+      {
+        "stock_code": "POST",
+        "record_count": 1256
+      },
+      {
+        "stock_code": "DOT",
+        "record_count": 710
+      },
+      {
+        "stock_code": "M",
+        "record_count": 571
+      },
+      {
+        "stock_code": "C2",
+        "record_count": 144
+      },
+      {
+        "stock_code": "D",
+        "record_count": 77
+      },
+      {
+        "stock_code": "S",
+        "record_count": 63
+      },
+      {
+        "stock_code": "BANK CHARGES",
+        "record_count": 37
+      },
+      {
+        "stock_code": "AMAZONFEE",
+        "record_count": 34
+      },
+      {
+        "stock_code": "CRUK",
+        "record_count": 16
+      },
+      {
+        "stock_code": "DCGSSGIRL",
+        "record_count": 13
+      },
+      {
+        "stock_code": "DCGSSBOY",
+        "record_count": 11
+      },
+      {
+        "stock_code": "gift_0001_20",
+        "record_count": 10
+      },
+      {
+        "stock_code": "gift_0001_10",
+        "record_count": 9
+      },
+      {
+        "stock_code": "gift_0001_30",
+        "record_count": 8
+      },
+      {
+        "stock_code": "DCGS0003",
+        "record_count": 5
+      },
+      {
+        "stock_code": "gift_0001_50",
+        "record_count": 4
+      },
+      {
+        "stock_code": "PADS",
+        "record_count": 4
+      },
+      {
+        "stock_code": "gift_0001_40",
+        "record_count": 3
+      },
+      {
+        "stock_code": "B",
+        "record_count": 3
+      },
+      {
+        "stock_code": "DCGS0076",
+        "record_count": 2
+      },
+      {
+        "stock_code": "DCGS0070",
+        "record_count": 2
+      },
+      {
+        "stock_code": "DCGS0069",
+        "record_count": 2
+      },
+      {
+        "stock_code": "m",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0055",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0072",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0074",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0057",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0004",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0073",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0071",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0068",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0067",
+        "record_count": 1
+      },
+      {
+        "stock_code": "DCGS0066P",
+        "record_count": 1
+      }
+    ]
+  },
+  "first_five_rows": [
+    {
+      "InvoiceNo": 536365,
+      "StockCode": "85123A",
+      "Description": "WHITE HANGING HEART T-LIGHT HOLDER",
+      "Quantity": 6,
+      "InvoiceDate": "2010-12-01 08:26:00",
+      "UnitPrice": 2.55,
+      "CustomerID": 17850.0,
+      "Country": "United Kingdom"
+    },
+    {
+      "InvoiceNo": 536365,
+      "StockCode": 71053,
+      "Description": "WHITE METAL LANTERN",
+      "Quantity": 6,
+      "InvoiceDate": "2010-12-01 08:26:00",
+      "UnitPrice": 3.39,
+      "CustomerID": 17850.0,
+      "Country": "United Kingdom"
+    },
+    {
+      "InvoiceNo": 536365,
+      "StockCode": "84406B",
+      "Description": "CREAM CUPID HEARTS COAT HANGER",
+      "Quantity": 8,
+      "InvoiceDate": "2010-12-01 08:26:00",
+      "UnitPrice": 2.75,
+      "CustomerID": 17850.0,
+      "Country": "United Kingdom"
+    },
+    {
+      "InvoiceNo": 536365,
+      "StockCode": "84029G",
+      "Description": "KNITTED UNION FLAG HOT WATER BOTTLE",
+      "Quantity": 6,
+      "InvoiceDate": "2010-12-01 08:26:00",
+      "UnitPrice": 3.39,
+      "CustomerID": 17850.0,
+      "Country": "United Kingdom"
+    },
+    {
+      "InvoiceNo": 536365,
+      "StockCode": "84029E",
+      "Description": "RED WOOLLY HOTTIE WHITE HEART.",
+      "Quantity": 6,
+      "InvoiceDate": "2010-12-01 08:26:00",
+      "UnitPrice": 3.39,
+      "CustomerID": 17850.0,
+      "Country": "United Kingdom"
+    }
+  ],
+  "output": {
+    "path": "G:\\生产实习大作业\\online_retail_dw\\data\\processed\\online_retail.tsv",
+    "columns": [
+      "row_id",
+      "invoice_no",
+      "stock_code",
+      "description",
+      "quantity",
+      "invoice_date",
+      "unit_price",
+      "customer_id",
+      "country",
+      "source_file",
+      "load_time"
+    ],
+    "load_time": "2026-07-20 16:30:37+0800"
+  },
+  "validation": {
+    "tsv_readable": true,
+    "source_row_count": 541909,
+    "reloaded_row_count": 541909,
+    "row_count_matches": true,
+    "expected_column_count": 11,
+    "reloaded_column_count": 11,
+    "column_count_matches": true,
+    "column_names_match": true,
+    "row_id_unique_before_write": true,
+    "row_id_unique_after_reload": true,
+    "control_character_cell_count": 0,
+    "no_embedded_tab_cr_lf": true,
+    "invoice_date_format_matches": true,
+    "tsv_size_bytes": 74612653,
+    "all_checks_passed": true
+  }
+}
